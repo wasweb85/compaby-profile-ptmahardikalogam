@@ -21,8 +21,8 @@
   <!-- Preload Hero LCP Image for instant first paint -->
   <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg-hd.webp') }}" type="image/webp">
 
-  <!-- Main Stylesheet (Cache-busted v2.5) -->
-  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.5">
+  <!-- Main Stylesheet (Cache-busted v3.0) -->
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=3.0">
   @stack('styles')
 </head>
 <body>
@@ -34,8 +34,8 @@
 
   @include('partials.footer')
 
-  <!-- Main JavaScript (Deferred, Cache-busted v2.5) -->
-  <script src="{{ asset('assets/js/main.js') }}?v=2.5" defer></script>
+  <!-- Main JavaScript (Deferred, Cache-busted v3.0) -->
+  <script src="{{ asset('assets/js/main.js') }}?v=3.0" defer></script>
   @stack('scripts')
 </body>
 </html>

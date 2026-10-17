@@ -46,10 +46,10 @@
   </section>
   <section class="sec dark">
     <div class="split">
-      <picture>
+      <picture class="split-pic">
         <source media="(max-width: 900px)" srcset="{{ asset('assets/images/warehouse-hd.webp') }}" type="image/webp">
         <source srcset="{{ asset('assets/images/warehouse-full.webp') }}" type="image/webp">
-        <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja" width="1100" height="734" loading="lazy">
+        <img class="split-img" src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja" width="1100" height="734" loading="lazy">
       </picture>
       <div>
         <h2>Dibangun untuk kemitraan jangka panjang</h2>

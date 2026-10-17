@@ -15,7 +15,7 @@
       <figure>
         <picture>
           <source srcset="{{ asset('assets/images/team-1.webp') }}" type="image/webp">
-          <img src="{{ asset('assets/images/team-1.jpg') }}" alt="Komisaris Utama" width="360" height="480" loading="lazy">
+          <img src="{{ asset('assets/images/team-1.jpg') }}" alt="Komisaris Utama" width="360" height="540" loading="lazy">
         </picture>
         <figcaption>Komisaris Utama</figcaption>
       </figure>
