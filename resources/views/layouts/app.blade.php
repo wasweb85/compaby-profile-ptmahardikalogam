@@ -19,11 +19,10 @@
   <link rel="preload" href="{{ asset('assets/fonts/barlow-400.woff2') }}" as="font" type="font/woff2" crossorigin>
 
   <!-- Preload Hero LCP Image for instant first paint -->
-  <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg-480.webp') }}" type="image/webp" media="(max-width: 480px)">
-  <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg-1440.webp') }}" type="image/webp" media="(min-width: 901px)">
+  <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg-hd.webp') }}" type="image/webp">
 
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <!-- Main Stylesheet (Cache-busted v2.5) -->
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=2.5">
   @stack('styles')
 </head>
 <body>
@@ -35,8 +34,8 @@
 
   @include('partials.footer')
 
-  <!-- Main JavaScript (Deferred) -->
-  <script src="{{ asset('assets/js/main.js') }}" defer></script>
+  <!-- Main JavaScript (Deferred, Cache-busted v2.5) -->
+  <script src="{{ asset('assets/js/main.js') }}?v=2.5" defer></script>
   @stack('scripts')
 </body>
 </html>

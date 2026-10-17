@@ -47,9 +47,8 @@
   <section class="sec dark">
     <div class="split">
       <picture>
-        <source media="(max-width: 480px)" srcset="{{ asset('assets/images/warehouse-480.webp') }}" type="image/webp">
-        <source media="(max-width: 900px)" srcset="{{ asset('assets/images/warehouse-900.webp') }}" type="image/webp">
-        <source srcset="{{ asset('assets/images/warehouse-1440.webp') }}" type="image/webp">
+        <source media="(max-width: 900px)" srcset="{{ asset('assets/images/warehouse-hd.webp') }}" type="image/webp">
+        <source srcset="{{ asset('assets/images/warehouse-full.webp') }}" type="image/webp">
         <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja" width="1100" height="734" loading="lazy">
       </picture>
       <div>
