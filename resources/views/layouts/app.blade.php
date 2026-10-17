@@ -18,6 +18,10 @@
   <link rel="preload" href="{{ asset('assets/fonts/barlow-condensed-700.woff2') }}" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{ asset('assets/fonts/barlow-400.woff2') }}" as="font" type="font/woff2" crossorigin>
 
+  <!-- Preload Hero LCP Image for instant first paint -->
+  <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg-480.webp') }}" type="image/webp" media="(max-width: 480px)">
+  <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg-1440.webp') }}" type="image/webp" media="(min-width: 901px)">
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
   @stack('styles')

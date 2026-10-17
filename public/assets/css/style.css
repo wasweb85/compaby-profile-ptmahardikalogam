@@ -45,15 +45,21 @@ nav a.cta:hover{background:#e29552}
 .btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:600;border:1px solid var(--line);transition:background .2s}
 .btn.p{background:var(--copper);border-color:var(--copper);color:#1a0f05}.btn.p:hover{background:#e29552}
 .btn:not(.p):hover{background:rgba(255,255,255,.1)}
-.bg-hero{--bg:url('../images/hero-bg.webp')}
-.bg-about{--bg:url('../images/about-bg.webp')}
-.bg-visi{--bg:url('../images/team-bg.webp')}
-.bg-nilai{--bg:url('../images/contact-bg.webp')}
-@media(max-width:768px){
-  .bg-hero{--bg:url('../images/hero-bg-mobile.webp')}
-  .bg-about{--bg:url('../images/about-bg-mobile.webp')}
-  .bg-visi{--bg:url('../images/team-bg-mobile.webp')}
-  .bg-nilai{--bg:url('../images/contact-bg-mobile.webp')}
+.bg-hero{--bg:url('../images/hero-bg-1440.webp')}
+.bg-about{--bg:url('../images/about-bg-1440.webp')}
+.bg-visi{--bg:url('../images/team-bg-1440.webp')}
+.bg-nilai{--bg:url('../images/contact-bg-1440.webp')}
+@media(max-width:900px){
+  .bg-hero{--bg:url('../images/hero-bg-900.webp')}
+  .bg-about{--bg:url('../images/about-bg-900.webp')}
+  .bg-visi{--bg:url('../images/team-bg-900.webp')}
+  .bg-nilai{--bg:url('../images/contact-bg-900.webp')}
+}
+@media(max-width:480px){
+  .bg-hero{--bg:url('../images/hero-bg-480.webp')}
+  .bg-about{--bg:url('../images/about-bg-480.webp')}
+  .bg-visi{--bg:url('../images/team-bg-480.webp')}
+  .bg-nilai{--bg:url('../images/contact-bg-480.webp')}
 }
 /* sections */
 .sec{padding:clamp(56px,9vw,112px) var(--pad)}
@@ -64,7 +70,11 @@ nav a.cta:hover{background:#e29552}
 .g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr))}
 .col{border-top:3px solid var(--copper);padding-top:18px}.col h3{margin-bottom:8px}
 .split{display:grid;gap:clamp(28px,5vw,72px);grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));align-items:center}
-.split img{width:100%;border-radius:6px;aspect-ratio:4/3;object-fit:cover}
+.split picture{display:block;width:100%}
+.split picture img, .split img{width:100%;border-radius:8px;aspect-ratio:16/9;max-height:260px;object-fit:cover;object-position:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+@media(min-width:769px){
+  .split picture img, .split img{aspect-ratio:4/3;max-height:none}
+}
 .link{display:inline-block;margin-top:22px;font-weight:600;border-bottom:2px solid var(--copper);padding-bottom:2px}
 /* material swatches */
 .sw{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:40px}
