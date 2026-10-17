@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Mail\ContactMessageMail;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
+use Throwable;
 
 class ContactController extends Controller
 {
@@ -24,7 +27,7 @@ class ContactController extends Controller
     {
         $validated = $request->validated();
 
-        // Log contact submission for follow-up
+        // Log contact submission for persistent backup
         Log::info('Formulir kontak PT Mahardika Logam Persada diterima:', [
             'nama' => $validated['nama'],
             'email' => $validated['email'],
@@ -34,6 +37,18 @@ class ContactController extends Controller
             'ip' => $request->ip(),
             'timestamp' => now()->toDateTimeString(),
         ]);
+
+        // Send email notification to company inbox
+        $recipient = config('mail.admin_address', 'mahardikalogampersada@gmail.com');
+
+        try {
+            Mail::to($recipient)->send(new ContactMessageMail($validated));
+        } catch (Throwable $e) {
+            Log::error('Gagal mengirim email kontak: '.$e->getMessage(), [
+                'recipient' => $recipient,
+                'data' => $validated,
+            ]);
+        }
 
         return redirect()
             ->route('contact')

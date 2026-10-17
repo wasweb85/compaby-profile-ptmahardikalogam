@@ -2,6 +2,8 @@
 
 namespace Tests\Feature;
 
+use App\Mail\ContactMessageMail;
+use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
 class CompanyProfileTest extends TestCase
@@ -79,6 +81,8 @@ class CompanyProfileTest extends TestCase
      */
     public function test_contact_form_submission_success(): void
     {
+        Mail::fake();
+
         $payload = [
             'nama' => 'Budi Pratama',
             'email' => 'budi@industri.co.id',
@@ -91,6 +95,12 @@ class CompanyProfileTest extends TestCase
 
         $response->assertRedirect(route('contact'));
         $response->assertSessionHas('success');
+
+        Mail::assertSent(ContactMessageMail::class, function (ContactMessageMail $mail) use ($payload) {
+            return $mail->hasTo('mahardikalogampersada@gmail.com') &&
+                   $mail->data['nama'] === $payload['nama'] &&
+                   $mail->data['email'] === $payload['email'];
+        });
     }
 
     /**
