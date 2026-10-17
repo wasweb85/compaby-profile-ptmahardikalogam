@@ -1,4 +1,12 @@
 
+/* Local Self-hosted Fonts (Barlow & Barlow Condensed - 1-year cache, 0 external blocking) */
+@font-face{font-family:'Barlow';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/barlow-400.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/barlow-500.woff2') format('woff2')}
+@font-face{font-family:'Barlow';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/barlow-600.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/barlow-condensed-500.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:600;font-display:swap;src:url('../fonts/barlow-condensed-600.woff2') format('woff2')}
+@font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:700;font-display:swap;src:url('../fonts/barlow-condensed-700.woff2') format('woff2')}
+
 :root{--steel:#101315;--graphite:#1a1f22;--copper:#d0833f;--paper:#eceff1;--ink:#14181a;--soft:#4d575d;--onD:#f2f4f5;--mutD:rgba(242,244,245,.72);--line:rgba(255,255,255,.16);--pad:clamp(20px,6vw,84px);--hf:'Barlow Condensed','Arial Narrow',sans-serif;--bf:Barlow,system-ui,sans-serif;color-scheme:light dark}
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#171b1e;--ink:#eef1f2;--soft:#a5afb5}}
 :root[data-theme="dark"]{--paper:#171b1e;--ink:#eef1f2;--soft:#a5afb5}
@@ -37,10 +45,16 @@ nav a.cta:hover{background:#e29552}
 .btn{display:inline-block;padding:14px 26px;border-radius:10px;font-weight:600;border:1px solid var(--line);transition:background .2s}
 .btn.p{background:var(--copper);border-color:var(--copper);color:#1a0f05}.btn.p:hover{background:#e29552}
 .btn:not(.p):hover{background:rgba(255,255,255,.1)}
-.bg-hero{--bg:url('../images/hero-bg.jpg')}
-.bg-about{--bg:url('../images/about-bg.jpg')}
-.bg-visi{--bg:url('../images/team-bg.jpg')}
-.bg-nilai{--bg:url('../images/contact-bg.jpg')}
+.bg-hero{--bg:url('../images/hero-bg.webp')}
+.bg-about{--bg:url('../images/about-bg.webp')}
+.bg-visi{--bg:url('../images/team-bg.webp')}
+.bg-nilai{--bg:url('../images/contact-bg.webp')}
+@media(max-width:768px){
+  .bg-hero{--bg:url('../images/hero-bg-mobile.webp')}
+  .bg-about{--bg:url('../images/about-bg-mobile.webp')}
+  .bg-visi{--bg:url('../images/team-bg-mobile.webp')}
+  .bg-nilai{--bg:url('../images/contact-bg-mobile.webp')}
+}
 /* sections */
 .sec{padding:clamp(56px,9vw,112px) var(--pad)}
 .light{background:var(--paper);color:var(--ink)}.light p{color:var(--soft)}

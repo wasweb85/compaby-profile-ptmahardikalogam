@@ -6,14 +6,9 @@
   <title>@yield('title', 'PT Mahardika Logam Persada — Perdagangan Logam & Aset Industri')</title>
   <meta name="description" content="@yield('meta_description', 'PT Mahardika Logam Persada menyediakan perdagangan logam, pengadaan material industri, dan pengelolaan aset industri.')">
 
-  <!-- Google Fonts: Barlow Condensed & Barlow (Non-blocking with Preload) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-  <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
-  </noscript>
+  <!-- Local Self-hosted Fonts Preload (Barlow & Barlow Condensed - 0 Render-blocking) -->
+  <link rel="preload" href="{{ asset('assets/fonts/barlow-condensed-700.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ asset('assets/fonts/barlow-400.woff2') }}" as="font" type="font/woff2" crossorigin>
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">

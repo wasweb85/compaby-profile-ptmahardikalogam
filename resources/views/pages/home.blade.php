@@ -46,7 +46,11 @@
   </section>
   <section class="sec dark">
     <div class="split">
-      <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja" width="1100" height="734" loading="lazy">
+      <picture>
+        <source media="(max-width: 640px)" srcset="{{ asset('assets/images/warehouse-mobile.webp') }}" type="image/webp">
+        <source srcset="{{ asset('assets/images/warehouse.webp') }}" type="image/webp">
+        <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja" width="1100" height="734" loading="lazy">
+      </picture>
       <div>
         <h2>Dibangun untuk kemitraan jangka panjang</h2>
         <p style="margin-top:16px">Kami mengutamakan profesionalisme, integritas, keselamatan kerja, dan efisiensi dalam setiap kerja sama.</p>

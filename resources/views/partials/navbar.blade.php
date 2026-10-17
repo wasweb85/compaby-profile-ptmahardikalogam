@@ -1,6 +1,9 @@
 <header id="hd">
   <a class="logo" href="{{ route('home') }}" aria-label="Beranda">
-    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo PT Mahardika Logam Persada" width="67" height="34">
+    <picture>
+      <source srcset="{{ asset('assets/images/logo.webp') }}" type="image/webp">
+      <img src="{{ asset('assets/images/logo.png') }}" alt="Logo PT Mahardika Logam Persada" width="67" height="34">
+    </picture>
     <span class="nm">PT Mahardika<br>Logam Persada</span>
   </a>
   <button id="mb" aria-label="Buka menu" aria-expanded="false">☰</button>

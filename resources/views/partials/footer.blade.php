@@ -2,7 +2,10 @@
   <div class="fg">
     <div>
       <a class="logo" href="{{ route('home') }}">
-        <img src="{{ asset('assets/images/logo.png') }}" alt="Logo PT Mahardika Logam Persada" width="79" height="40" loading="lazy">
+        <picture>
+          <source srcset="{{ asset('assets/images/logo.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/logo.png') }}" alt="Logo PT Mahardika Logam Persada" width="79" height="40" loading="lazy">
+        </picture>
         <span class="nm">PT Mahardika<br>Logam Persada</span>
       </a>
       <p>Perdagangan logam, pengadaan material industri, dan pengelolaan aset industri.</p>
