@@ -13,7 +13,7 @@
   <section class="sec dark">
     <div class="split" style="align-items:start">
       <div class="info">
-        <div><small>Email</small><a href="mailto:mahardikalogampersada4@gmail.com">mahardikalogampersada4@gmail.com</a></div>
+        <div><small>Email</small><a href="mailto:mahardikalogampersada@gmail.com">mahardikalogampersada@gmail.com</a></div>
         <div><small>Telepon / WhatsApp</small><a href="tel:+6282174026509">0821 7402 6509</a> &amp; <a href="tel:+6285719110360">0857 1911 0360</a></div>
         <div><small>Alamat</small><a href="https://maps.app.goo.gl/3yRVkeu5CFMVJeU77" target="_blank" rel="noopener">Buaran I RT 003 RW 008, Kel. Jatinegara, Kec. Cakung, Jl. Pengarengan No. 95, Jakarta Timur 13930</a></div>
       </div>
@@ -22,7 +22,7 @@
         <p style="margin-top:16px">Kirim pesan lewat WhatsApp untuk permintaan penawaran, pengadaan material, atau pembongkaran dan pengelolaan aset industri.</p>
         <div class="btns">
           <a class="btn p" href="https://wa.me/6282174026509" target="_blank" rel="noopener">Chat WhatsApp</a>
-          <a class="btn" href="mailto:mahardikalogampersada4@gmail.com">Kirim email</a>
+          <a class="btn" href="mailto:mahardikalogampersada@gmail.com">Kirim email</a>
         </div>
 
         <div class="contact-form-wrap" id="formulir-kontak">

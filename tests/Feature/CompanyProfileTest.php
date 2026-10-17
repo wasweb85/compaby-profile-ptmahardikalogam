@@ -66,7 +66,7 @@ class CompanyProfileTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Hubungi kami');
-        $response->assertSee('mahardikalogampersada4@gmail.com');
+        $response->assertSee('mahardikalogampersada@gmail.com');
         $response->assertSee('0821 7402 6509');
         $response->assertSee('Buaran I RT 003 RW 008');
         $response->assertSee('Ceritakan kebutuhan Anda');
