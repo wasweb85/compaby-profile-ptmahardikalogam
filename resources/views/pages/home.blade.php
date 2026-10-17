@@ -46,7 +46,7 @@
   </section>
   <section class="sec dark">
     <div class="split">
-      <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja">
+      <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja" width="1100" height="734" loading="lazy">
       <div>
         <h2>Dibangun untuk kemitraan jangka panjang</h2>
         <p style="margin-top:16px">Kami mengutamakan profesionalisme, integritas, keselamatan kerja, dan efisiensi dalam setiap kerja sama.</p>

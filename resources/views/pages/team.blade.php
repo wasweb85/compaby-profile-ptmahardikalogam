@@ -12,10 +12,10 @@
   </section>
   <section class="sec dark">
     <div class="team">
-      <figure><img src="{{ asset('assets/images/team-1.jpg') }}" alt="Komisaris Utama"><figcaption>Komisaris Utama</figcaption></figure>
-      <figure><img src="{{ asset('assets/images/team-2.jpg') }}" alt="Komisaris"><figcaption>Komisaris</figcaption></figure>
-      <figure><img src="{{ asset('assets/images/team-3.jpg') }}" alt="Direktur Utama"><figcaption>Direktur Utama</figcaption></figure>
-      <figure><img src="{{ asset('assets/images/team-4.jpg') }}" alt="Direktur"><figcaption>Direktur</figcaption></figure>
+      <figure><img src="{{ asset('assets/images/team-1.jpg') }}" alt="Komisaris Utama" width="360" height="480" loading="lazy"><figcaption>Komisaris Utama</figcaption></figure>
+      <figure><img src="{{ asset('assets/images/team-2.jpg') }}" alt="Komisaris" width="360" height="540" loading="lazy"><figcaption>Komisaris</figcaption></figure>
+      <figure><img src="{{ asset('assets/images/team-3.jpg') }}" alt="Direktur Utama" width="360" height="540" loading="lazy"><figcaption>Direktur Utama</figcaption></figure>
+      <figure><img src="{{ asset('assets/images/team-4.jpg') }}" alt="Direktur" width="360" height="540" loading="lazy"><figcaption>Direktur</figcaption></figure>
     </div>
   </section>
   <section class="band">

@@ -17,7 +17,7 @@
         <p style="margin-top:16px">PT Mahardika Logam Persada bergerak di bidang perdagangan logam, pengadaan material industri, serta pengelolaan aset industri, meliputi besi, tembaga, aluminium, stainless steel, kabel, trafo, dan pembongkaran gedung.</p>
         <p style="margin-top:14px">Kami mengutamakan profesionalisme, integritas, keselamatan kerja, dan efisiensi untuk kemitraan jangka panjang.</p>
       </div>
-      <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja">
+      <img src="{{ asset('assets/images/warehouse.jpg') }}" alt="Gudang material pipa baja" width="1100" height="734" loading="lazy">
     </div>
   </section>
   <section class="sec dark">
