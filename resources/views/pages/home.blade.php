@@ -18,13 +18,55 @@
     <h2>Material yang kami tangani</h2>
     <p class="lead">Dari logam dasar sampai pembongkaran gedung, satu mitra untuk kebutuhan industri Anda.</p>
     <div class="sw">
-      <div class="m1">Besi</div>
-      <div class="m2">Tembaga</div>
-      <div class="m3">Aluminium</div>
-      <div class="m4">Stainless Steel</div>
-      <div class="m5">Kabel</div>
-      <div class="m6">Trafo</div>
-      <div class="m7"><span>Pembongkaran Gedung</span></div>
+      <div class="sw-card">
+        <picture>
+          <source srcset="{{ asset('assets/images/material-besi.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/material-besi.jpg') }}" alt="Material Besi" width="600" height="630" loading="lazy" decoding="async">
+        </picture>
+        <span class="sw-title">Besi</span>
+      </div>
+      <div class="sw-card">
+        <picture>
+          <source srcset="{{ asset('assets/images/material-tembaga.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/material-tembaga.jpg') }}" alt="Material Tembaga" width="600" height="630" loading="lazy" decoding="async">
+        </picture>
+        <span class="sw-title">Tembaga</span>
+      </div>
+      <div class="sw-card">
+        <picture>
+          <source srcset="{{ asset('assets/images/material-aluminium.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/material-aluminium.jpg') }}" alt="Material Aluminium" width="600" height="630" loading="lazy" decoding="async">
+        </picture>
+        <span class="sw-title">Aluminium</span>
+      </div>
+      <div class="sw-card">
+        <picture>
+          <source srcset="{{ asset('assets/images/material-stainless.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/material-stainless.jpg') }}" alt="Material Stainless Steel" width="600" height="630" loading="lazy" decoding="async">
+        </picture>
+        <span class="sw-title">Stainless Steel</span>
+      </div>
+      <div class="sw-card">
+        <picture>
+          <source srcset="{{ asset('assets/images/material-kabel.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/material-kabel.jpg') }}" alt="Material Kabel" width="600" height="630" loading="lazy" decoding="async">
+        </picture>
+        <span class="sw-title">Kabel</span>
+      </div>
+      <div class="sw-card">
+        <picture>
+          <source srcset="{{ asset('assets/images/material-trafo.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/material-trafo.jpg') }}" alt="Material Trafo" width="600" height="630" loading="lazy" decoding="async">
+        </picture>
+        <span class="sw-title">Trafo</span>
+      </div>
+      <div class="sw-card">
+        <picture>
+          <source srcset="{{ asset('assets/images/material-bongkar.webp') }}" type="image/webp">
+          <img src="{{ asset('assets/images/material-bongkar.jpg') }}" alt="Layanan Pembongkaran Gedung" width="600" height="630" loading="lazy" decoding="async">
+        </picture>
+        <span class="sw-title">Pembongkaran Gedung</span>
+      </div>
     </div>
   </section>
   <section class="sec light">

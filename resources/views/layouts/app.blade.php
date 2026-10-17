@@ -21,8 +21,8 @@
   <!-- Preload Hero LCP Image for instant first paint -->
   <link rel="preload" as="image" href="{{ asset('assets/images/hero-bg-hd.webp') }}" type="image/webp">
 
-  <!-- Main Stylesheet (Cache-busted v3.0) -->
-  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=3.0">
+  <!-- Main Stylesheet (Cache-busted v3.1) -->
+  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v=3.1">
   @stack('styles')
 </head>
 <body>
