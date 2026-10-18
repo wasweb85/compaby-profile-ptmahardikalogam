@@ -23,10 +23,11 @@ class CompanyProfileTest extends TestCase
         $response->assertSee('assets/js/main.js');
         $response->assertSee('assets/images/logo.png');
         $response->assertSee('assets/images/warehouse.jpg');
+        $response->assertSee('1410260052481');
     }
 
     /**
-     * Test about page renders successfully.
+     * Test about page renders successfully with legalitas section.
      */
     public function test_about_page_renders_successfully(): void
     {
@@ -35,9 +36,47 @@ class CompanyProfileTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Tentang kami');
         $response->assertSee('Siapa kami');
+        $response->assertSee('Legalitas Perusahaan');
+        $response->assertSee('1410260052481');
+        $response->assertSee('1000000011527288');
+        $response->assertSee('KBLI 2025');
+        $response->assertSee('46799');
+        $response->assertSee('documents/NIB-PT-Mahardika-Logam-Persada.pdf');
         $response->assertSee('Visi dan misi');
         $response->assertSee('Nilai-nilai perusahaan');
         $response->assertSee('Perjalanan perusahaan');
+    }
+
+    /**
+     * Test BreadcrumbList schema and Organization schema render in JSON-LD.
+     */
+    public function test_schema_breadcrumblist_and_organization_render_correctly(): void
+    {
+        // Home page breadcrumb
+        $homeResponse = $this->get(route('home'));
+        $homeResponse->assertStatus(200);
+        $homeResponse->assertSee('"@type":"BreadcrumbList"', false);
+        $homeResponse->assertSee('"name":"Beranda"', false);
+        $homeResponse->assertSee('"taxID":"1000000011527288"', false);
+        $homeResponse->assertSee('"1410260052481"', false);
+
+        // About page breadcrumb
+        $aboutResponse = $this->get(route('about'));
+        $aboutResponse->assertStatus(200);
+        $aboutResponse->assertSee('"@type":"BreadcrumbList"', false);
+        $aboutResponse->assertSee('"name":"Tentang Kami"', false);
+
+        // Team page breadcrumb
+        $teamResponse = $this->get(route('team'));
+        $teamResponse->assertStatus(200);
+        $teamResponse->assertSee('"@type":"BreadcrumbList"', false);
+        $teamResponse->assertSee('"name":"Tim & Manajemen"', false);
+
+        // Contact page breadcrumb
+        $contactResponse = $this->get(route('contact'));
+        $contactResponse->assertStatus(200);
+        $contactResponse->assertSee('"@type":"BreadcrumbList"', false);
+        $contactResponse->assertSee('"name":"Hubungi Kami"', false);
     }
 
     /**

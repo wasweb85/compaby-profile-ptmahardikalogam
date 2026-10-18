@@ -10,6 +10,15 @@
     <h1>Tim dan manajemen</h1>
     <p>Didukung tim yang profesional, kompeten, dan berintegritas dengan mengutamakan tanggung jawab, keselamatan, dan kualitas pelayanan.</p>
   </section>
+
+  <!-- Navigasi Breadcrumbs -->
+  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <ol class="breadcrumb-list">
+      <li class="breadcrumb-item"><a class="breadcrumb-link" href="{{ route('home') }}">Beranda</a></li>
+      <li class="breadcrumb-item"><span class="breadcrumb-current" aria-current="page">Tim &amp; Manajemen</span></li>
+    </ol>
+  </nav>
+
   <section class="sec dark">
     <div class="team">
       <figure>

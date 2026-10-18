@@ -35,7 +35,41 @@
   <meta name="twitter:description" content="@yield('meta_description', 'PT Mahardika Logam Persada menyediakan perdagangan logam, pengadaan material industri, dan pengelolaan aset industri.')">
   <meta name="twitter:image" content="{{ asset('android-chrome-512x512.png') }}">
 
-  <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph & Logo -->
+  <!-- Schema.org JSON-LD Structured Data: Organization, WebSite, & BreadcrumbList -->
+  @php
+    $currentRouteName = request()->route() ? request()->route()->getName() : '';
+    $breadcrumbItems = [
+      [
+        '@type' => 'ListItem',
+        'position' => 1,
+        'name' => 'Beranda',
+        'item' => route('home'),
+      ],
+    ];
+
+    if ($currentRouteName === 'about') {
+      $breadcrumbItems[] = [
+        '@type' => 'ListItem',
+        'position' => 2,
+        'name' => 'Tentang Kami',
+        'item' => route('about'),
+      ];
+    } elseif ($currentRouteName === 'team') {
+      $breadcrumbItems[] = [
+        '@type' => 'ListItem',
+        'position' => 2,
+        'name' => 'Tim & Manajemen',
+        'item' => route('team'),
+      ];
+    } elseif (str_starts_with((string) $currentRouteName, 'contact')) {
+      $breadcrumbItems[] = [
+        '@type' => 'ListItem',
+        'position' => 2,
+        'name' => 'Hubungi Kami',
+        'item' => route('contact'),
+      ];
+    }
+  @endphp
   <script type="application/ld+json">
   {!! json_encode([
     '@context' => 'https://schema.org',
@@ -44,7 +78,8 @@
         '@type' => 'Organization',
         '@id' => url('/') . '#organization',
         'name' => 'PT Mahardika Logam Persada',
-        'alternateName' => ['Mahardika Logam', 'PT Mahardika Logam'],
+        'legalName' => 'PT MAHARDIKA LOGAM PERSADA',
+        'alternateName' => ['Mahardika Logam', 'PT Mahardika Logam', 'PT MLP'],
         'url' => url('/'),
         'logo' => [
           '@type' => 'ImageObject',
@@ -55,13 +90,28 @@
           'height' => 512,
         ],
         'image' => asset('android-chrome-512x512.png'),
-        'description' => 'Perusahaan terpercaya di bidang perdagangan logam, pengadaan material industri, dan pengelolaan aset industri.',
+        'description' => 'PT Mahardika Logam Persada adalah perusahaan terpercaya di bidang perdagangan logam, pengadaan material industri, dan pengelolaan aset industri.',
+        'taxID' => '1000000011527288',
+        'leiCode' => '1410260052481',
+        'identifier' => [
+          [
+            '@type' => 'PropertyValue',
+            'name' => 'Nomor Induk Berusaha (NIB)',
+            'value' => '1410260052481',
+          ],
+          [
+            '@type' => 'PropertyValue',
+            'name' => 'NPWP',
+            'value' => '1000000011527288',
+          ],
+        ],
+        'email' => 'mahardikalogampersada@gmail.com',
         'address' => [
           '@type' => 'PostalAddress',
-          'streetAddress' => 'Buaran I RT 003 RW 008, Kel. Jatinegara, Kec. Cakung, Jl. Pengarengan No. 95',
+          'streetAddress' => 'Buaran I JL Pengarengan No. 93, RT 003 RW 008, Kel. Jatinegara, Kec. Cakung',
           'addressLocality' => 'Jakarta Timur',
           'addressRegion' => 'DKI Jakarta',
-          'postalCode' => '13930',
+          'postalCode' => '13910',
           'addressCountry' => 'ID',
         ],
         'contactPoint' => [
@@ -78,6 +128,18 @@
             'availableLanguage' => ['Indonesian'],
           ],
         ],
+        'knowsAbout' => [
+          'Perdagangan Logam',
+          'Pengadaan Material Industri',
+          'Pengelolaan Aset Industri',
+          'Besi',
+          'Tembaga',
+          'Aluminium',
+          'Stainless Steel',
+          'Kabel',
+          'Trafo',
+          'Pembongkaran Gedung',
+        ],
       ],
       [
         '@type' => 'WebSite',
@@ -88,6 +150,11 @@
           '@id' => url('/') . '#organization',
         ],
         'inLanguage' => 'id-ID',
+      ],
+      [
+        '@type' => 'BreadcrumbList',
+        '@id' => url()->current() . '#breadcrumb',
+        'itemListElement' => $breadcrumbItems,
       ],
     ],
   ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) !!}
