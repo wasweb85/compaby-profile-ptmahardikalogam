@@ -37,60 +37,60 @@
 
   <!-- Schema.org JSON-LD Structured Data for Google Knowledge Graph & Logo -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "{{ url('/') }}#organization",
-        "name": "PT Mahardika Logam Persada",
-        "alternateName": ["Mahardika Logam", "PT Mahardika Logam"],
-        "url": "{{ url('/') }}",
-        "logo": {
-          "@type": "ImageObject",
-          "@id": "{{ url('/') }}#logo",
-          "url": "{{ asset('android-chrome-512x512.png') }}",
-          "caption": "Logo PT Mahardika Logam Persada",
-          "width": 512,
-          "height": 512
-        },
-        "image": "{{ asset('android-chrome-512x512.png') }}",
-        "description": "Perusahaan terpercaya di bidang perdagangan logam, pengadaan material industri, dan pengelolaan aset industri.",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Buaran I RT 003 RW 008, Kel. Jatinegara, Kec. Cakung, Jl. Pengarengan No. 95",
-          "addressLocality": "Jakarta Timur",
-          "addressRegion": "DKI Jakarta",
-          "postalCode": "13930",
-          "addressCountry": "ID"
-        },
-        "contactPoint": [
-          {
-            "@type": "ContactPoint",
-            "telephone": "+62-821-7402-6509",
-            "contactType": "sales",
-            "availableLanguage": ["Indonesian"]
-          },
-          {
-            "@type": "ContactPoint",
-            "telephone": "+62-857-1911-0360",
-            "contactType": "customer service",
-            "availableLanguage": ["Indonesian"]
-          }
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "{{ url('/') }}#website",
-        "url": "{{ url('/') }}",
-        "name": "PT Mahardika Logam Persada",
-        "publisher": {
-          "@id": "{{ url('/') }}#organization"
-        },
-        "inLanguage": "id-ID"
-      }
-    ]
-  }
+  {!! json_encode([
+    '@context' => 'https://schema.org',
+    '@graph' => [
+      [
+        '@type' => 'Organization',
+        '@id' => url('/') . '#organization',
+        'name' => 'PT Mahardika Logam Persada',
+        'alternateName' => ['Mahardika Logam', 'PT Mahardika Logam'],
+        'url' => url('/'),
+        'logo' => [
+          '@type' => 'ImageObject',
+          '@id' => url('/') . '#logo',
+          'url' => asset('android-chrome-512x512.png'),
+          'caption' => 'Logo PT Mahardika Logam Persada',
+          'width' => 512,
+          'height' => 512,
+        ],
+        'image' => asset('android-chrome-512x512.png'),
+        'description' => 'Perusahaan terpercaya di bidang perdagangan logam, pengadaan material industri, dan pengelolaan aset industri.',
+        'address' => [
+          '@type' => 'PostalAddress',
+          'streetAddress' => 'Buaran I RT 003 RW 008, Kel. Jatinegara, Kec. Cakung, Jl. Pengarengan No. 95',
+          'addressLocality' => 'Jakarta Timur',
+          'addressRegion' => 'DKI Jakarta',
+          'postalCode' => '13930',
+          'addressCountry' => 'ID',
+        ],
+        'contactPoint' => [
+          [
+            '@type' => 'ContactPoint',
+            'telephone' => '+62-821-7402-6509',
+            'contactType' => 'sales',
+            'availableLanguage' => ['Indonesian'],
+          ],
+          [
+            '@type' => 'ContactPoint',
+            'telephone' => '+62-857-1911-0360',
+            'contactType' => 'customer service',
+            'availableLanguage' => ['Indonesian'],
+          ],
+        ],
+      ],
+      [
+        '@type' => 'WebSite',
+        '@id' => url('/') . '#website',
+        'url' => url('/'),
+        'name' => 'PT Mahardika Logam Persada',
+        'publisher' => [
+          '@id' => url('/') . '#organization',
+        ],
+        'inLanguage' => 'id-ID',
+      ],
+    ],
+  ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE) !!}
   </script>
 
   <!-- Local Self-hosted Fonts Preload (Barlow & Barlow Condensed - 0 Render-blocking) -->
