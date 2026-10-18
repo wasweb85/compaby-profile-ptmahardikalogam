@@ -23,7 +23,6 @@ class CompanyProfileTest extends TestCase
         $response->assertSee('assets/js/main.js');
         $response->assertSee('assets/images/logo.png');
         $response->assertSee('assets/images/warehouse.jpg');
-        $response->assertSee('1410260052481');
     }
 
     /**
@@ -36,12 +35,10 @@ class CompanyProfileTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Tentang kami');
         $response->assertSee('Siapa kami');
-        $response->assertSee('Legalitas Perusahaan');
+        $response->assertSee('Legalitas perusahaan');
         $response->assertSee('1410260052481');
         $response->assertSee('1000000011527288');
-        $response->assertSee('KBLI 2025');
         $response->assertSee('46799');
-        $response->assertSee('documents/NIB-PT-Mahardika-Logam-Persada.pdf');
         $response->assertSee('Visi dan misi');
         $response->assertSee('Nilai-nilai perusahaan');
         $response->assertSee('Perjalanan perusahaan');

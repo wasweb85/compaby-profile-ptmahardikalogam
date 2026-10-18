@@ -10,15 +10,6 @@
     <h1>Hubungi kami</h1>
     <p>Untuk kerja sama bisnis dan kebutuhan pengadaan material industri.</p>
   </section>
-
-  <!-- Navigasi Breadcrumbs -->
-  <nav class="breadcrumb-nav" aria-label="Breadcrumb">
-    <ol class="breadcrumb-list">
-      <li class="breadcrumb-item"><a class="breadcrumb-link" href="{{ route('home') }}">Beranda</a></li>
-      <li class="breadcrumb-item"><span class="breadcrumb-current" aria-current="page">Hubungi Kami</span></li>
-    </ol>
-  </nav>
-
   <section class="sec dark">
     <div class="split" style="align-items:start">
       <div class="info">
